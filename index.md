@@ -187,6 +187,8 @@ Next, click on ``Start process`` on the top-right, select the name of the upload
 
     [![Camunda Start Process](./resources/images/engine_start_process.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/engine_start_process.png)
 
+    Finally, click on ``Start``.
+
 17. Switch back to the Camunda Cockpit, and select the deployed workflow.
 Then, a running process instance should be shown on the bottom.
 Click on the ID of the instance to visualize the current variables, as well as the position of the token.
