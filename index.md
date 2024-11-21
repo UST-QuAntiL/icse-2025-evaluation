@@ -14,7 +14,7 @@ The use case utilizes the following tools:
 
 ## Setup
 
-**In case you use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icse-2025-evaluation/handson.html#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
+**In case you use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icse-2025-evaluation/#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
 
 The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/icse-2025-evaluation).
 
@@ -25,17 +25,17 @@ Thus, execute the following command:
 git config --system core.longpaths true
 ```
 
-Afterwards, clone the repository and navigate to the ``2024-icwe-tutorial`` folder:
+Afterwards, clone the repository and navigate to the ``icse-2025-evaluation`` folder:
 
 ```
 git clone https://github.com/UST-QuAntiL/QuantME-UseCases.git
-cd QuantME-UseCases/2024-icwe-tutorial
+cd QuantME-UseCases/icse-2025-evaluation
 ```
 
 All components are available via Docker.
 Therefore, these components can be started using the Docker-Compose file available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial/docker):
 
-1. Update the [.env](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial/docker/.env) file with your settings: 
+1. Update the [.env](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/icse-2025-evaluation/docker/.env) file with your settings: 
   * ``PUBLIC_HOSTNAME``: Enter the hostname/IP address of your Docker engine. Do *not* use ``localhost``.
   * ``IBM_ACCESS_TOKEN``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/). The token can also be left empty, but then the views described below only display a reduced set of data.
 
