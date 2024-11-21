@@ -225,7 +225,7 @@ Click on the ``Select Patterns`` button to start the pattern selection for the u
 
 2. Click on the ``+`` sign on the right to add a new algorithm pattern.
 To generate the workflow modeled in the first part of the tutorial, we select ``Quantum Approximate Optimization Algorithm (QAOA)`` as the algorithm pattern.
-Furthermore, add the ``Circuit Cutting`` pattern, ``Biased Initial State`` pattern, and the ``Readout Error Mitigation`` from the Augmentation Pattern category.
+Furthermore, add the ``Biased Initial State`` pattern, ``Circuit Cutting`` pattern, and the ``Readout Error Mitigation`` from the Augmentation Pattern category.
 Finally, click on ``Confirm Selection``.
 
     [![Modeler Pattern Selection Overview](./resources/images/pattern_selection_selection.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/pattern_selection_selection.png)
