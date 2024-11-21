@@ -161,7 +161,7 @@ Otherwise, please follow the steps of the deployment dialogue.
 
     [![Modeler Service Deployment](./resources/images/modeler_service_deployment_overview.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment_overview.png)
 
-    Use the following input parameters for the deployment of the services:
+    If the service deployment is required, use the following input parameters:
 
        * DockerEngineURL: ``tcp://dind:2375``
        * Port: Select four ports in the range 9990-9999
