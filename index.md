@@ -66,14 +66,14 @@ In the first part of the hands-on session, you will model and execute a quantum 
 To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https://www.iaas.uni-stuttgart.de/publications/Weder2020_QuantumWorkflows.pdf) is used.
 
 Please download the initial workflow model available [here](./resources/code/icse25-workflow-configured-start-event.bpmn).
-It contains a pre-configured Start Event requesting the required input for the workflow execution.
+It contains a pre-configured *Start Event* requesting the required input for the workflow execution.
 Open the workflow model by clicking on ``File`` and ``Open File``.
 Afterwards, proceed with the following steps to model and execute the quantum workflow orchestrating QAOA:
 
-1. Add a Warm-Starting Task after the Start Event.
+1. Add a *Warm-Starting Task* after the *Start Event*.
 Warm-starting is used to approximate a solution that is incorporated into the quantum circuit to facilitate the search for the optimal solution.
-Select the Task icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the QuantME Constructs category, and afterwards QuantME Tasks in the drop-down menu (3).
-Finally, click on Warm-Starting Task within the QuantME Tasks category (4).
+Select the *Task* icon in the palette (1), drag it into the pane, click on the wrench symbol (2), then first select the *QuantME Constructs* category, and afterwards *QuantME Tasks* in the drop-down menu (3).
+Finally, click on *Warm-Starting Task* within the *QuantME Tasks* category (4).
 
     [![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_warm-start-modeling.png)
 
