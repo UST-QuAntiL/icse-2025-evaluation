@@ -1,7 +1,7 @@
 # Hands-On Session
 
 In the following, we will guide you through all the steps required to model, deploy, and execute a hybrid quantum application using workflows.
-In the first part, a quantum workflow is modeled manually by attendees.
+In the first part, a quantum workflow is modeled manually by participants.
 Afterwards, the same workflow is automatically generated based on a set of selected patterns.
 
 The use case utilizes the following tools:
@@ -16,7 +16,7 @@ The use case utilizes the following tools:
 
 **In case you use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icse-2025-evaluation/#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
 
-The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/icse-2025-evaluation).
+The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2025-icse).
 
 On Windows, you have to activate long paths for Git to enable cloning and pushing to this repository.
 Thus, execute the following command:
@@ -25,17 +25,17 @@ Thus, execute the following command:
 git config --system core.longpaths true
 ```
 
-Afterwards, clone the repository and navigate to the ``icse-2025-evaluation`` folder:
+Afterwards, clone the repository and navigate to the ``2025-icse`` folder:
 
 ```
 git clone https://github.com/UST-QuAntiL/QuantME-UseCases.git
-cd QuantME-UseCases/icse-2025-evaluation
+cd QuantME-UseCases/2025-icse
 ```
 
 All components are available via Docker.
 Therefore, these components can be started using the Docker-Compose file available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial/docker):
 
-1. Update the [.env](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/icse-2025-evaluation/docker/.env) file with your settings: 
+1. Update the [.env](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2025-icse/docker/.env) file with your settings: 
   * ``PUBLIC_HOSTNAME``: Enter the hostname/IP address of your Docker engine. Do *not* use ``localhost``.
   * ``IBM_ACCESS_TOKEN``: Enter your IBMQ token, which can be retrieved [here](https://quantum.ibm.com/). The token can also be left empty, but then the views described below only display a reduced set of data.
 
