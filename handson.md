@@ -8,7 +8,7 @@ navigation_weight: 3
 # Hands-On Session
 
 In the following, we will guide you through all the steps required to model, deploy, and execute a hybrid quantum application using workflows.
-In the first part of the tutorial, a quantum workflow is modeled manually by attendees.
+In the first part, a quantum workflow is modeled manually by attendees.
 Afterwards, the same workflow is automatically generated based on a set of selected patterns.
 
 The use case utilizes the following tools:
@@ -22,9 +22,9 @@ The use case utilizes the following tools:
 
 ## Setup
 
-**In case you participate in the tutorial on-site and use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icwe-tutorial-2024/handson.html#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
+**In case you participate in the tutorial on-site and use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icse-2025-evaluation/handson.html#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
 
-The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2024-icwe-tutorial).
+The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/icse-2025-evaluation).
 
 On Windows, you have to activate long paths for Git to enable cloning and pushing to this repository.
 Thus, execute the following command:
