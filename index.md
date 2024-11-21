@@ -166,7 +166,7 @@ Otherwise, please follow the steps of the deployment dialogue.
    * DockerEngineURL: ``tcp://dind:2375``
    * Port: Select four ports in the range 9990-9999
 
-[![Modeler Service Deployment Input](./resources/images/modeler_service_deployment_input.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment_input.png)
+  [![Modeler Service Deployment Input](./resources/images/modeler_service_deployment_input.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment_input.png)
 
 14. After the binding completes, a corresponding notification is displayed as shown below.
 Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
