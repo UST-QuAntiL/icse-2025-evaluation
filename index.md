@@ -210,7 +210,7 @@ Finally, open the downloaded image, visualizing the MaxCut solution for the inpu
 ## Part 2: Pattern-based Generation of Quantum Workflows
 
 In the second part of the tutorial, we will discuss how to simplify the modeling process, by automatically generating the quantum workflow modeled in the first part based on a set of selected patterns.
-Therefore, we utilize the [quantum computing patterns](https://www.quantumcomputingpatterns.org/#/).
+Therefore, we utilize the [quantum computing patterns](https://patterns.platform.planqk.de/pattern-languages/af7780d5-1f97-4536-8da7-4194b093ab1d).
 
 Please proceed with the following steps to generate, adapt, and execute the quantum workflow using patterns:
 
