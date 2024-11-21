@@ -159,7 +159,7 @@ Click on ``Upload CSAR`` to start the deployment process.
 In case you participate in the tutorial on-site and use one of the provided virtual machines, the services are already pre-deployed and are directly bound to the workflow.
 Otherwise, please follow the steps of the deployment dialogue.
 
-    [![Modeler Service Deployment](./resources/images/modeler_service_deployment.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment.png)
+    [![Modeler Service Deployment](./resources/images/modeler_service_deployment_overview.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment.png)
 
 14. After the binding completes, a corresponding notification is displayed as shown below.
 Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
