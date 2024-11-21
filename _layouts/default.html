@@ -11,13 +11,13 @@
   </head>
   <body>
     <header class="page-header" role="banner">
-      <h1 class="project-name">Quantum Service-oriented Computing: A Practical Introduction to Quantum Web Services and Quantum Workflows</h1>
+      <h1 class="project-name">Pattern-based Generation and Adaptation of Quantum Workflows</h1>
       <h2 class="project-tagline">{{ site.description }}</h2>
       <nav class="mainNav">
         <ul class="nav-list">
           {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %} {% for p in navigation_pages %} {% if p.navigation_weight %}
           <li class="nav-element">
-            <a href="/icwe-tutorial-2024{{ p.url }}" {% if p.url==page.url %}class="active" {% endif %}>
+            <a href="/icse-2025-evaluation{{ p.url }}" {% if p.url==page.url %}class="active" {% endif %}>
               {{ p.title }}
             </a>
           </li>

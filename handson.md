@@ -2,7 +2,7 @@
 title: Hands-On Session
 layout: default
 
-navigation_weight: 3
+navigation_weight: 1
 ---
 
 # Hands-On Session
