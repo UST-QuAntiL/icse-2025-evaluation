@@ -1,10 +1,3 @@
----
-title: Hands-On Session
-layout: default
-
-navigation_weight: 1
----
-
 # Hands-On Session
 
 In the following, we will guide you through all the steps required to model, deploy, and execute a hybrid quantum application using workflows.
@@ -18,11 +11,10 @@ The use case utilizes the following tools:
 * [OpenTOSCA Container](https://github.com/OpenTOSCA/container): A TOSCA-compliant deployment system.
 * [Quantum Workflow Modeler](https://github.com/PlanQK/workflow-modeler): A graphical BPMN modeler to define, transform, and deploy quantum workflows.
 * [Quokka](https://github.com/UST-QuAntiL/Quokka): A microservice ecosystem enabling a service-based execution of quantum algorithms.
-* [Winery](https://github.com/OpenTOSCA/winery): A web-based modeler for TOSCA-based deployment models, which can be attached to activities of quantum workflows to enable their automated deployment in the target environment.
 
 ## Setup
 
-**In case you participate in the tutorial on-site and use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icse-2025-evaluation/handson.html#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
+**In case you use one of the provided virtual machines, move to [Part 1](https://ust-quantil.github.io/icse-2025-evaluation/handson.html#quantum-workflow-modeler) and use the provided IP to replace the placeholder $IP.**
 
 The code required for the hands-on session is available [here](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/icse-2025-evaluation).
 
