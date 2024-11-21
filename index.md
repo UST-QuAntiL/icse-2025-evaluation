@@ -77,35 +77,35 @@ Finally, click on *Warm-Starting Task* within the *QuantME Tasks* category (4).
 
     [![Modeler First Task](./resources/images/modeler_warm-start-modeling.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_warm-start-modeling.png)
 
-2. Configure the Warm-Starting Task using the values shown below.
+2. Configure the *Warm-Starting Task* using the values shown below.
 Thereby, ``Biased Initial State`` is selected as Warm-Starting pattern and ``Initial State Warm-Start Egger`` as Warm-Starting method.
 Furthermore, we will use QAOA to solve the MaxCut problem, thus, select ``QAOA`` as the quantum algorithm to warm-start.
 Finally, utilize the ``Goemans-Williamson`` algorithm to calculate the initial state to use, as well as ``10`` repetitions to use for the approximation.
 
     [![Modeler Configure Warm-Start](./resources/images/modeler_warm_start_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_warm_start_config.png)
 
-3. Next, add a second task of type Quantum Circuit Loading Task to load to parameterized QAOA circuit that is later executed in the variational loop.
+3. Next, add a second task of type *Quantum Circuit Loading Task* to load to parameterized QAOA circuit that is later executed in the variational loop.
 The functionality to generate a corresponding quantum circuit is provided by Quokka, therefore, configure the task using ``quokka/maxcut`` as URL.
-Furthermore, connect both tasks with the start event using sequence flow.
+Furthermore, connect both tasks with the *Start Event* using sequence flow.
 
     [![Modeler Configure Circuit Loading](./resources/images/modeler_loading_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_loading_config.png)
 
 4. Due to today's restricted quantum computers, the quantum circuit should be [cut into multiple smaller sub-circuits](https://arxiv.org/pdf/2302.01792), thus, reducing the impact of errors, as well as the limited number of qubits.
-Add a Circuit Cutting Task, which is also available within the QuantME Tasks category.
-Configure the Circuit Cutting Task to use the Cutting Method ``knitting toolbox``, utilizing the implementation provided by the [Circuit Knitting Toolbox](https://qiskit-extensions.github.io/circuit-knitting-toolbox/).
+Add a *Circuit Cutting Task*, which is also available within the *QuantME Tasks* category.
+Configure the *Circuit Cutting Task* to use the Cutting Method ``knitting toolbox``, utilizing the implementation provided by the [Circuit Knitting Toolbox](https://qiskit-extensions.github.io/circuit-knitting-toolbox/).
 Furthermore, set the Maximum Sub-Circuit width to ``4``, the Maximum Number of Cuts to ``2``, and the Maximum Number of Sub-Circuits to ``2``.
 Finally, add an Exclusive Gateway to later join the sequence flow of the optimization loop.
 
     [![Modeler Configure Circuit Cutting](./resources/images/modeler_cutting_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_cutting_config.png)
 
-5. Next, add a task of type Quantum Circuit Execution Task to execute the loaded quantum circuit on a quantum computer.
+5. Next, add a task of type *Quantum Circuit Execution Task* to execute the loaded quantum circuit on a quantum computer.
 For this example, we configure the task to use ``ibm`` as the quantum hardware provider and the ``aer_qasm_simulator`` as QPU.
 The aer_qasm_simulator is a simulator that can be executed locally to avoid queuing times.
 Furthermore, the number of shots, i.e., the number of executions, is set to ``2000``, and it is specified that the circuit to execute was implemented using ``openqasm``.
 
     [![Modeler Configure Circuit Execution](./resources/images/modeler_execution_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_execution_config.png)
 
-6. To reduce the impact of readout errors, add a Readout Error Mitigation Task and configure it as follows:
+6. To reduce the impact of readout errors, add a *Readout Error Mitigation Task* and configure it as follows:
    * Provider: ``ibm``
    * QPU: ``aer_qasm_simulator``
    * Mitigation Method: ``Matrix Inversion``
@@ -113,35 +113,35 @@ Furthermore, the number of shots, i.e., the number of executions, is set to ``20
 
     [![Modeler Configure Readout Error Mitigation](./resources/images/modeler_rem_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_rem_config.png)
 
-7. After the mitigation, the results of the different sub-circuit executions are combined using a Cutting Result Combination Task to receive the overall result.
+7. After the mitigation, the results of the different sub-circuit executions are combined using a *Cutting Result Combination Task* to receive the overall result.
 Thereby, the same Cutting Method must be used, i.e., ``knitting toolbox``.
 
     [![Modeler Configure Result Combination](./resources/images/modeler_combination_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_combination_config.png)
 
-8. To evaluate the quality of the results, add a Result Evaluation Task and configure it as follows:
+8. To evaluate the quality of the results, add a *Result Evaluation Task* and configure it as follows:
 
    * Objective Function: ``Expectation Value``
    * Cost function to use: ``maxcut``
    
-   Additionally, add another Exclusive Gateway to enter the next iteration of the optimization loop if required.
+   Additionally, add another *Exclusive Gateway* to enter the next iteration of the optimization loop if required.
 
     [![Modeler Configure Result Evaluation](./resources/images/modeler_evaluation_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_evaluation_config.png)
 
-9. If another iteration is required, the parameters are optimized using a Parameter Optimization Task.
+9. If another iteration is required, the parameters are optimized using a *Parameter Optimization Task*.
 Configure the task to utilize ``Cobyla`` as an Optimizer.
 
     [![Modeler Configure Optimizer](./resources/images/modeler_optimization_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_optimization_config.png)
 
-10. Connect the Optimizer Task to the first Exclusive Gateway.
-Afterwards, add the following expression to the sequence flow between the second Exclusive Gateway and the Optimizer Task as shown below:
+10. Connect the *Optimizer Task* to the first *Exclusive Gateway*.
+Afterwards, add the following expression to the sequence flow between the second *Exclusive Gateway* and the *Optimizer Task* as shown below:
 ``${ execution.getVariable('converged')== null || execution.getVariable('converged') == 'false'}``
 
     [![Modeler Configure Sequence Flow](./resources/images/modeler_uppergateway_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_uppergateway_config.png)
 
-11. Finally, add a User Task and connect the second Exclusive Gateway to it.
+11. Finally, add a *User Task* and connect the second *Exclusive Gateway* to it.
 Furthermore, use the following condition: ``${ execution.getVariable('converged')!= null && execution.getVariable('converged') == 'true'}``
-The Result Evaluation Task generates an image to visualize the identified MaxCut.
-Thus, the User Task has to be configured to enable analyzing this image.
+The *Result Evaluation Task* generates an image to visualize the identified MaxCut.
+Thus, the *User Task* has to be configured to enable analyzing this image.
 Hence, use a form of type Generated Task Forms and add a form field to display the URL of the result image as shown below:
 
     [![Modeler Configure Sequence Flow 2](./resources/images/modeler_user_task_config.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_user_task_config.png)
@@ -200,8 +200,8 @@ Hover over the different QuantME modeling constructs to visualize additional, ta
 
     [![Camunda Quantum View](./resources/images/engine_quantum_view.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/engine_quantum_view.png)
 
-19. Wait until the token reaches the final user task (reload the Camunda Cockpit periodically), then, switch to the Tasklist.
-Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL.
+19. Wait until the token reaches the final *User Task* (reload the Camunda Cockpit periodically), then, switch to the Tasklist.
+Select the task item on the left, then click on ``Claim`` to activate the item, and download the result plot using the given URL (replace localhost by your IP).
 Afterwards, click on ``Complete`` to terminate the workflow instance.
 Finally, open the downloaded image, visualizing the MaxCut solution for the input graph.
 
