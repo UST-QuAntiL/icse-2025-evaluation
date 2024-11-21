@@ -151,9 +151,7 @@ For example, the Warm-Starting Task and Quantum Circuit Loading Task are replace
 
     [![Modeler Transformation](./resources/images/modeler_transformation.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_transformation.png)
 
-13. In case you experience any problems, the workflow model after transformation is available [here](./resources/code/icwe24-workflow-transformed.bpmn), which can be opened in the modeler to continue from this point.
-
-    Next, the required services to execute the workflow model must be deployed.
+13. Next, the required services to execute the workflow model must be deployed.
 For this, deployment models are attached to the activities of the workflow, enabling to deploy the services for these activities.
 Click on the ``OpenTOSCA`` button and then select ``Service Deployment``.
 The popup shows the services that have to be deployed.
