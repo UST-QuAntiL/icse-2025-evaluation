@@ -1,0 +1,41 @@
+---
+---
+@import 'jekyll-theme-cayman';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en';
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  align: center;
+}
+
+.nav-element {
+  float: left;
+}
+
+.nav-element a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-element a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #480211;
+}
+
+.page-header{
+  padding-bottom: 0px;
+  background-image: linear-gradient(120deg, #cd0a41, #daa00c)
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6{
+  color: #480211;
+}
