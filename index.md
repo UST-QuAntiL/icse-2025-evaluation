@@ -65,7 +65,7 @@ If you are not familiar with BPMN, have a look at the [Camunda introduction](htt
 In the first part of the hands-on session, you will model and execute a quantum workflow orchestrating the [Quantum Approximate Optimization Algorithm (QAOA)](https://arxiv.org/pdf/1411.4028.pdf) to solve the Maximum Cut (MaxCut) problem.
 To model the quantum workflow, the [Quantum Modeling Extension (QuantME)](https://www.iaas.uni-stuttgart.de/publications/Weder2020_QuantumWorkflows.pdf) is used.
 
-Please download the initial workflow model available [here](./resources/code/icwe24-workflow-configured-start-event.bpmn).
+Please download the initial workflow model available [here](./resources/code/icse25-workflow-configured-start-event.bpmn).
 It contains a pre-configured Start Event requesting the required input for the workflow execution.
 Open the workflow model by clicking on ``File`` and ``Open File``.
 Afterwards, proceed with the following steps to model and execute the quantum workflow orchestrating QAOA:
