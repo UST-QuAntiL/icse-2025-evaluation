@@ -156,10 +156,17 @@ For this, deployment models are attached to the activities of the workflow, enab
 Click on the ``OpenTOSCA`` button and then select ``Service Deployment``.
 The popup shows the services that have to be deployed.
 Click on ``Upload CSAR`` to start the deployment process.
-In case you participate in the tutorial on-site and use one of the provided virtual machines, the services are already pre-deployed and are directly bound to the workflow.
+In case you use one of the provided virtual machines, the services are already pre-deployed and are directly bound to the workflow.
 Otherwise, please follow the steps of the deployment dialogue.
 
-    [![Modeler Service Deployment](./resources/images/modeler_service_deployment_overview.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment.png)
+    [![Modeler Service Deployment](./resources/images/modeler_service_deployment_overview.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment_overview.png)
+
+    Use the following input parameters for the deployment of the services:
+
+   * DockerEngineURLs: ``tcp://dind:2375``
+   * Port: Select four ports in the range 9990-9999
+
+    [![Modeler Service Deployment Input](./resources/images/modeler_service_deployment_input.png)](https://github.com/UST-QuAntiL/icse-2025-evaluation/tree/master/resources/images/modeler_service_deployment_input.png)
 
 14. After the binding completes, a corresponding notification is displayed as shown below.
 Finally, to upload the workflow to the Camunda Engine, click on the ``Deploy Workflow`` button:
